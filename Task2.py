@@ -22,3 +22,6 @@ df = df.drop(columns=["price", "quantity", "product"])
 #resetting the index
 df = df.reset_index(drop=True)
 
+df = df[["sales", "date", "region"]]
+df.to_csv("formatted_data.csv", index=False)
+
